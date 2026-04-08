@@ -21,3 +21,15 @@ export interface Skill {
   category: string;
   items: string[];
 }
+
+export interface SkillItem {
+  name: string;
+  level: number; // 0-100
+}
+
+export interface SkillCategory {
+  category: string;
+  icon: string;
+  color: "cyan" | "indigo" | "violet";
+  items: SkillItem[];
+}
