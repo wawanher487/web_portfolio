@@ -1,3 +1,5 @@
+"use client";
+
 import { siteConfig } from "@/lib/data";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
@@ -49,7 +51,7 @@ export default function PhotoCard() {
       >
         {/* Foto — ganti src dengan foto kamu */}
         <Image
-          src="/photo.jpg"
+          src="/wawan.jpeg"
           alt={siteConfig.name}
           fill
           className="object-cover object-top"
@@ -91,7 +93,7 @@ export default function PhotoCard() {
 
       {/* Badge floating di pojok — efek kedalaman 3D */}
       <div
-        className="absolute -top-3 -right-3 bg-[#0f0f1a] border border-cyan-500/30 rounded-xl px-3 py-2 font-mono text-xs"
+        className="absolute -top-3 -right-3 bg-surface-800 border border-cyan-500/30 rounded-xl px-3 py-2 font-mono text-xs"
         style={{ transform: "translateZ(20px)" }}
       >
         <span className="text-cyan-400">{"{ "}</span>
