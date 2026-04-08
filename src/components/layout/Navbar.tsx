@@ -22,7 +22,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       //jika scroll lebih dari 20px, setIsScrolled = true
-      setIsScrolled(window.screenY > 20);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);

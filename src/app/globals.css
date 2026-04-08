@@ -5,29 +5,70 @@
    Di v4, semua custom theme ada di sini
    ================================ */
 @theme {
-  /* Custom Colors - Primary (biru untuk aksen) */
-  --color-primary-50: #f0f9ff;
-  --color-primary-100: #e0f2fe;
-  --color-primary-500: #0ea5e9;
-  --color-primary-600: #0284c7;
-  --color-primary-700: #0369a1;
-  --color-primary-900: #0c4a6e;
+  /* Dark tech color palette */
+  --color-primary-400: #22d3ee;
+  --color-primary-500: #06b6d4;
+  --color-primary-600: #0891b2;
+
+  --color-accent-400: #818cf8;
+  --color-accent-500: #6366f1;
+
+  --color-surface-900: #0a0a0f;
+  --color-surface-800: #0f0f1a;
+  --color-surface-700: #1a1a2e;
+  --color-surface-600: #16213e;
 
   /* Custom Fonts */
   --font-sans: var(--font-inter), sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
 
   /* Custom Animation */
-  --animate-fade-up: fadeUp 0.5s ease-out forwards;
+  --animate-fade-up: fadeUp 0.6s ease-out forwards;
+  --animate-glow-pulse: glowPulse 3s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-typing-cursor: blink 1s step-end infinite;
 
   @keyframes fadeUp {
     0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes glowPulse {
+    0%,
+    100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-12px) rotate(1deg);
+    }
+    66% {
+      transform: translateY(-6px) rotate(-1deg);
+    }
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
     }
   }
 }
@@ -41,15 +82,30 @@
   }
 
   body {
-    @apply bg-white text-gray-900 antialiased;
-  }
-
-  /* Dark mode */
-  .dark body {
-    @apply bg-gray-950 text-gray-100;
+    background-color: #0a0a0f;
+    color: #e2e8f0;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
   }
 
   :focus-visible {
-    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+    outline: 2px solid #22d3ee;
+    outline-offset: 2px;
+  }
+
+  /* custom scroolbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #22d3ee40;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #22d3ee80;
   }
 }
