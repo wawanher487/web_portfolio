@@ -33,28 +33,51 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 dark:bg-gray-950/80 backdrop-blur-md shadow-sm" : "bg-transparent"}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "bg-surface-900/90 backdrop-blur-xl border-b border-cyan-500/10 shadow-lg shadow-cyan-500/20" : "bg-transparent"}`}
     >
-      <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/">{siteConfig.name}</Link>
+      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        {/* logo  */}
+        <Link
+          href="/"
+          className="font-mono text-sm font-bold group hover:shadow-sm shadow-cyan-500 p-1"
+        >
+          <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
+            {"<"}
+          </span>
+          <span className="text-white mx-1">{siteConfig.name}</span>
+          <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
+            {">"}
+          </span>
+        </Link>
 
         {/* Dekstop Navigation */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+        <ul className="hidden md:flex items-center gap-1">
+          {navLinks.map((link, i) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-500 transition-colors"
+                className="relative px-4 py-2 text-sm font-mono text-slate-400 hover:text-cyan-400 transition-colors group"
               >
+                <span className="text-cyan-500/50 text-xs mr-1">0{i + 1}.</span>
                 {link.label}
+                <span className="absolute bottom-0 left-4 right-4 h-px bg-cyan-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
               </Link>
             </li>
           ))}
+          <li className="ml-4">
+            <a
+              href="https://resume.wawanhermawan.dev/"
+              target="_blank"
+              className="px-4 py-2 text-sm font-mono text-cyan-400 border border-cyan-400/50 rounded hover:bg-cyan-400/20 transition-colors"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
         {/* mobile: humberger button  */}
         <button
-          className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          className="md:hidden p-2 text-slate-400 hover:text-cyan-400 transition-colors"
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-label="Toggle menu"
         >
@@ -64,19 +87,32 @@ export default function Navbar() {
 
       {/* mobile menu - muncul dibawah navbar saat hamburger diklik */}
       {isMobileOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800">
-          <ul className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4">
-            {navLinks.map((link) => (
+        <div className="md:hidden bg-surface-900/95 backdrop-blur-xl border-t border-white/70">
+          <ul className="max-w-6xl mx-auto px-6 py-6 flex flex-col gap-4">
+            {navLinks.map((link, i) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 transition-colors"
+                  className="font-mono text-slate-400 hover:text-cyan-400 transition-colors"
                   onClick={() => setIsMobileOpen(false)} //tutu menu setelah diklik
                 >
+                  <span className="text-cyan-500/50 text-xs mr-2">
+                    0{i + 1}.
+                  </span>
                   {link.label}
                 </Link>
               </li>
             ))}
+            <li>
+              <span className="text-cyan-500/50 text-xs mr-2">05.</span>
+              <a
+                href="https://resume.wawanhermawan.dev/"
+                target="_blank"
+                className="font-mono text-slate-400 hover:text-cyan-400 transition-colors"
+              >
+                Resume
+              </a>
+            </li>
           </ul>
         </div>
       )}
