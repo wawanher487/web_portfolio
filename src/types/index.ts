@@ -1,3 +1,12 @@
+export interface Siteconfig {
+  name: string;
+  title: string;
+  email: string;
+  github: string;
+  linkedin: string;
+  tagline: string;
+}
+
 export interface Project {
   id: number;
   title: string;
