@@ -13,7 +13,7 @@ export default function SectionHeader({
   subtitle,
 }: SectionHeaderProps) {
   return (
-    <div className="mb-16">
+    <div className="mb-10">
       {/* Label dengan gaya kode */}
       <p className="font-mono text-cyan-400 text-sm mb-3">{label}</p>
 

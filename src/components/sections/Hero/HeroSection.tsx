@@ -1,11 +1,13 @@
 "use client";
 
 import { siteConfig } from "@/lib/data";
-import { ArrowDown, Computer, LinkIcon, Mail } from "lucide-react";
 import Link from "next/link";
 import GridBackground from "./GridBackground";
 import TypingText from "./TypingAnimation";
 import PhotoCard from "./PhotoCard";
+import { FaGithub, FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import { SiGmail } from "react-icons/si";
 
 export default function HeroSection() {
   const typingTexts = [
@@ -20,10 +22,16 @@ export default function HeroSection() {
     { value: "10+", label: "Projects Completed" },
     { value: "5+", label: "Businesses Helped" },
   ];
+
+  const SocialLinks = [
+    { icon: FaGithubSquare, href: siteConfig.github, label: "Github" },
+    { icon: FaLinkedin, href: siteConfig.linkedin, label: "LinkedIn" },
+    { icon: SiGmail, href: `mailto:${siteConfig.email}`, label: "Email" },
+  ];
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center px-6 overflow-hidden bg-surface-900 pt-15 lg:pt-0"
+      className="relative min-h-screen flex items-center px-6 overflow-hidden  pt-15 lg:pt-0"
     >
       <GridBackground />
       <div className="relative z-10 max-w-6xl mx-auto w-full pt-16">
@@ -37,7 +45,7 @@ export default function HeroSection() {
             </div>
 
             {/* sapaan */}
-            <p className="font-mono text-slate-400 text-sm mb-3 animate-fade-up">
+            <p className="font-mono text-slate-400 text-sm mb-4 animate-fade-up">
               Hi there 👋 I&apos;m
             </p>
 
@@ -52,12 +60,32 @@ export default function HeroSection() {
             </div>
 
             {/* Tagline */}
-            <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-lg">
+            <p className="text-slate-400 text-lg leading-relaxed mb-6 max-w-lg">
               {siteConfig.tagline}
             </p>
 
+            {/* Sosial Links */}
+            <div className="flex items-center gap-5 mb-6">
+              {SocialLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target={link.label !== "Email" ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    aria-label={link.label}
+                    className="p-2 text-slate-500 hover:text-cyan-400 hover:bg-cyan-400/10 rounded-lg transition-all"
+                  >
+                    <Icon size={20} />
+                  </a>
+                );
+              })}
+              <div className="h-px flex-1 bg-slate-800" />
+            </div>
+
             {/* CTA Butttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="#projects"
                 className="
@@ -77,7 +105,7 @@ export default function HeroSection() {
             </div>
 
             {/* Stats ketika mobile */}
-            <div className="lg:hidden flex gap-8 justify-center">
+            <div className="lg:hidden flex gap-8 justify-between mt-8">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="font-mono text-2xl font-bold text-cyan-400">
@@ -108,11 +136,6 @@ export default function HeroSection() {
               ))}
             </div>
           </div>
-        </div>
-        {/* Scroll indicator */}
-        <div className="hidden absolute bottom-8 left-1/2 -translate-x-1/2 lg:flex flex-col items-center gap-2 text-slate-600 animate-bounce">
-          <span className="font-mono text-xs">scroll</span>
-          <ArrowDown size={14} />
         </div>
       </div>
     </section>

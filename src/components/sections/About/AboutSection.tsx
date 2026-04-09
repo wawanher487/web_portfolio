@@ -20,9 +20,6 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="py-24 px-6 relative">
-      {/* Subtle separator line dari section sebelumnya */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-linear-to-b from-transparent to-cyan-500/20" />
-
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         <SectionHeader
           label="01. about me"
@@ -30,7 +27,7 @@ export default function AboutSection() {
           subtitle="A little bit about my background and what drives me."
         />
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 lg:gap-16 items-start">
           {/* ── Kiri: Bio Text ── */}
           <div
             style={{
@@ -67,7 +64,7 @@ export default function AboutSection() {
                   "Tailwind CSS",
                   "MongoDB",
                   "Docker",
-                  "Vercel"
+                  "Vercel",
                 ].map((tech) => (
                   <div
                     key={tech}
