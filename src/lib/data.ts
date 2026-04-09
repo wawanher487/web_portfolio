@@ -33,6 +33,7 @@ export const skills = [
       { name: "React", level: 92 },
       { name: "TypeScript", level: 88 },
       { name: "Tailwind CSS", level: 90 },
+      { name: "Laravel", level: 85 },
     ],
   },
   {
@@ -43,7 +44,8 @@ export const skills = [
       { name: "Node.js", level: 88 },
       { name: "NestJS", level: 85 },
       { name: "PostgreSQL", level: 80 },
-      { name: "Prisma", level: 82 },
+      { name: "MongoDB", level: 90 },
+      { name: "Supabase", level: 82 },
     ],
   },
   {
@@ -52,8 +54,9 @@ export const skills = [
     color: "violet",
     items: [
       { name: "Git", level: 92 },
-      { name: "Docker", level: 72 },
+      { name: "Docker", level: 77 },
       { name: "Vercel", level: 90 },
+      { name: "Postman", level: 95 },
       { name: "REST / GraphQL", level: 85 },
     ],
   },
@@ -62,12 +65,44 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "Project Pertama",
+    title: "CPRN 2026 Website",
     description:
-      "Deskripsi singkat apa yang dibangun dan masalah apa yang diselesaikan.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/...",
-    live: "https://...",
+      "Official event website for CPRN 2026 with SEO optimization and high-performance landing pages to increase visibility and engagement.",
+    longDescription:
+      "Developed using Next.js with a focus on performance and SEO. Achieved high Lighthouse scores and fast load times on Vercel. Implemented structured metadata and responsive UI to improve user experience and search engine indexing.",
+    tech: ["Next.js", "Tailwind CSS", "mongoDB", "Vercel", "SEO"],
+    github: "https://github.com/wawanher487/cprn-2026",
+    live: "https://cprn2026.ceccep.org/",
     featured: true,
+    accentColor: "orange" as const,
+    number: "01",
+  },
+  {
+    id: 2,
+    title: "Monja Digital Platform",
+    description:
+      "Backend system for a business website, focused on building scalable RESTful APIs to support content management and business operations.",
+    longDescription:
+      "Developed the backend architecture using NestJS and Node.js, creating structured and scalable RESTful APIs. Handled data management with MongoDB and ensured clean, maintainable code using TypeScript. The system supports seamless data flow between frontend and backend, enabling efficient content updates and improved application performance.",
+    tech: ["NestJS", "Node.js", "TypeScript", "MongoDB"],
+    github: "https://github.com/wawanher487/monja",
+    live: undefined,
+    featured: true,
+    accentColor: "green" as const,
+    number: "02",
+  },
+  {
+    id: 3,
+    title: "Face Recognition Attendance System",
+    description:
+      "Automated attendance system leveraging face recognition and real-time processing to improve accuracy and eliminate manual tracking.",
+    longDescription:
+      "Designed and developed a scalable attendance system integrating face recognition for automated check-in. Built backend services using NestJS and Node.js, and implemented real-time data processing with RabbitMQ for efficient communication between services. Utilized Python for face recognition processing and MongoDB for flexible data storage. The system significantly reduces manual errors and streamlines employee attendance management.",
+    tech: ["React", "NestJS", "Node.js", "Python", "MongoDB", "RabbitMQ"],
+    github: "https://github.com/wawanher487/attendance-system",
+    live: undefined,
+    featured: true,
+    accentColor: "cyan" as const,
+    number: "03",
   },
 ];

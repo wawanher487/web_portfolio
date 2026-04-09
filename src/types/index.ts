@@ -11,10 +11,13 @@ export interface Project {
   id: number;
   title: string;
   description: string;
+  longDescription: string;
   tech: string[];
   github: string;
   live?: string;
   featured: boolean;
+  accentColor: "orange" | "green" | "cyan";
+  number: string;
 }
 
 export interface Skill {
