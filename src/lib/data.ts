@@ -85,7 +85,7 @@ export const projects = [
     longDescription:
       "Developed the backend architecture using NestJS and Node.js, creating structured and scalable RESTful APIs. Handled data management with MongoDB and ensured clean, maintainable code using TypeScript. The system supports seamless data flow between frontend and backend, enabling efficient content updates and improved application performance.",
     tech: ["NestJS", "Node.js", "TypeScript", "MongoDB"],
-    github: "https://github.com/wawanher487/monja",
+    github: "https://github.com/wawanher487/api-monja",
     live: undefined,
     featured: true,
     accentColor: "green" as const,
@@ -99,7 +99,7 @@ export const projects = [
     longDescription:
       "Designed and developed a scalable attendance system integrating face recognition for automated check-in. Built backend services using NestJS and Node.js, and implemented real-time data processing with RabbitMQ for efficient communication between services. Utilized Python for face recognition processing and MongoDB for flexible data storage. The system significantly reduces manual errors and streamlines employee attendance management.",
     tech: ["React", "NestJS", "Node.js", "Python", "MongoDB", "RabbitMQ"],
-    github: "https://github.com/wawanher487/attendance-system",
+    github: "https://github.com/wawanher487/absensi-apps",
     live: undefined,
     featured: true,
     accentColor: "cyan" as const,
