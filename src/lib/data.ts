@@ -6,6 +6,7 @@ export const siteConfig = {
   email: "wawanhermawan2402@gmail.com",
   github: "https://github.com/wawanher487/",
   linkedin: "https://www.linkedin.com/in/wawanhermawan24/",
+  whatsapp: "https://wa.me/6281928897858",
   tagline:
     "I build fast, scalable websites and turn them into growth engines for your business.",
 };

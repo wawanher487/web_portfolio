@@ -6,7 +6,7 @@ import { Send, Mail, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { useContactForm } from "@/hooks/useContactForm";
 import { siteConfig } from "@/lib/data";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 
 // ============================================================
@@ -87,7 +87,7 @@ export default function ContactSection() {
       icon: Mail,
       label: "Email",
       value: siteConfig.email,
-      href: `mailto:${siteConfig.email}`,
+      href: `https://mail.google.com/mail/?view=cm&fs=1&to=${siteConfig.email}`,
     },
     {
       icon: FaGithub,
@@ -100,6 +100,12 @@ export default function ContactSection() {
       label: "LinkedIn",
       value: "linkedin.com/in/wawanhermawan24",
       href: siteConfig.linkedin,
+    },
+    {
+      icon: FaWhatsapp,
+      label: "WhatsApp",
+      value: "0819-2889-7858",
+      href: siteConfig.whatsapp,
     },
   ];
 
@@ -115,6 +121,20 @@ export default function ContactSection() {
           subtitle="Have a project in mind or want to discuss an opportunity? I'd love to hear from you."
         />
 
+        {/* Pesan ajakan */}
+        <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 mb-5">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <span className="font-mono text-xs text-cyan-400">
+              open to opportunities
+            </span>
+          </div>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            I&apos;m currently available for freelance projects and full-time
+            positions. If you have an exciting project, let&apos;s talk.
+          </p>
+        </div>
+
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* ── Kiri: Info (2/5 lebar) ── */}
           <div
@@ -125,28 +145,13 @@ export default function ContactSection() {
               transition: "all 0.6s ease-out",
             }}
           >
-            {/* Pesan ajakan */}
-            <div className="p-6 rounded-2xl border border-slate-800 bg-slate-900/40">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-                <span className="font-mono text-xs text-cyan-400">
-                  open to opportunities
-                </span>
-              </div>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                I&apos;m currently available for freelance projects and
-                full-time positions. If you have an exciting project, let&apos;s
-                talk.
-              </p>
-            </div>
-
             {/* Contact Links */}
-            <div className="space-y-3">
+            <div className="space-y-5">
               {contactLinks.map(({ icon: Icon, label, value, href }) => (
                 <a
                   key={label}
                   href={href}
-                  target={label !== "Email" ? "_blank" : undefined}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl border border-slate-800 hover:border-cyan-500/30 hover:bg-cyan-500/5 transition-all group"
                 >
@@ -200,7 +205,7 @@ export default function ContactSection() {
               // Form State
               <form
                 onSubmit={handleSubmit}
-                className="space-y-5 p-6 rounded-2xl border border-slate-800 bg-slate-900/40"
+                className="space-y-3 p-5 rounded-2xl border border-slate-800 bg-slate-900/40"
               >
                 {/* Row: Name + Email side by side */}
                 <div className="grid sm:grid-cols-2 gap-5">

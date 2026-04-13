@@ -16,9 +16,6 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="py-24 px-6 relative">
-      {/* separator */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-linear-to-b from-transparent to-slate-800" />
-
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         <SectionHeader
           label="03. projects"

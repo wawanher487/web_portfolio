@@ -5,7 +5,7 @@ import Link from "next/link";
 import GridBackground from "./GridBackground";
 import TypingText from "./TypingAnimation";
 import PhotoCard from "./PhotoCard";
-import { FaGithub, FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare, FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 
@@ -24,9 +24,14 @@ export default function HeroSection() {
   ];
 
   const SocialLinks = [
-    { icon: FaGithubSquare, href: siteConfig.github, label: "Github" },
     { icon: FaLinkedin, href: siteConfig.linkedin, label: "LinkedIn" },
-    { icon: SiGmail, href: `mailto:${siteConfig.email}`, label: "Email" },
+    { icon: FaGithubSquare, href: siteConfig.github, label: "Github" },
+    { icon: FaWhatsapp, href: siteConfig.whatsapp, label: "WhatsApp" },
+    {
+      icon: SiGmail,
+      href: `https://mail.google.com/mail/?view=cm&fs=1&to=${siteConfig.email}`,
+      label: "Email",
+    },
   ];
   return (
     <section
@@ -65,14 +70,14 @@ export default function HeroSection() {
             </p>
 
             {/* Sosial Links */}
-            <div className="flex items-center gap-5 mb-6">
+            <div className="flex items-center gap-2 mb-6">
               {SocialLinks.map((link) => {
                 const Icon = link.icon;
                 return (
                   <a
                     key={link.label}
                     href={link.href}
-                    target={link.label !== "Email" ? "_blank" : undefined}
+                    target="_blank"
                     rel="noopener noreferrer"
                     aria-label={link.label}
                     className="p-2 text-slate-500 hover:text-cyan-400 hover:bg-cyan-400/10 rounded-lg transition-all"
@@ -89,7 +94,7 @@ export default function HeroSection() {
               <Link
                 href="#projects"
                 className="
-              group relative px-6 py-3 bg-cyan-500 text-surface-900 font-mono font-semibold text-sm rounded-lg overflow-hidden transition-all hover:shadow-lg hover:shadow-cyan-500/25 hover:-translate-y-0.5"
+              group relative px-7 py-3 bg-cyan-500 text-surface-900 font-mono font-semibold text-sm rounded-lg overflow-hidden transition-all hover:shadow-lg hover:shadow-cyan-500/25 hover:-translate-y-0.5"
               >
                 {/* shimmer effect */}
                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12" />

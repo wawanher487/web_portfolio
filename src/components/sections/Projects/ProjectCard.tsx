@@ -129,7 +129,7 @@ export default function ProjectCard({
           <p
             className="text-slate-500 text-sm leading-relaxed mt-3 transition-all duration-300"
             style={{
-              maxHeight: isHovered ? "120px" : "0px",
+              maxHeight: isHovered ? "250px" : "0px",
               opacity: isHovered ? 1 : 0,
               overflow: "hidden",
             }}
