@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wawanhermawan.dev
+
+# Sitemaps
+Sitemap: https://wawanhermawan.dev/sitemap.xml
