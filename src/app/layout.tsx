@@ -17,9 +17,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wawan Hermawan — Fullstack Developer & Digital Growth Builder",
+  title: "Wawan Hermawan — Fullstack Developer & Website Specialist",
   description:
-    "Portfolio of Wawan Hermawan, a fullstack developer specializing in Next.js, Node.js, and NestJS. I build fast, scalable websites and turn them into growth engines that help businesses increase traffic, generate leads, and boost sales.",
+    "Fullstack developer specializing in Next.js, Node.js, and scalable web applications. Helping businesses build high-performance websites that increase traffic, generate leads, and grow revenue.",
 };
 
 export default function RootLayout({

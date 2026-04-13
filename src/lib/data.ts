@@ -8,7 +8,7 @@ export const siteConfig = {
   linkedin: "https://www.linkedin.com/in/wawanhermawan24/",
   whatsapp: "https://wa.me/6281928897858",
   tagline:
-    "I build fast, scalable websites and turn them into growth engines for your business.",
+    "I help businesses build fast, scalable websites and turn them into growth engines that increase traffic, generate leads, and boost revenue.",
 };
 
 export const aboutData = {

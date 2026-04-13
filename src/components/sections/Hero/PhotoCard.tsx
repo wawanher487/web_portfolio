@@ -52,10 +52,13 @@ export default function PhotoCard() {
         {/* Foto — ganti src dengan foto kamu */}
         <Image
           src="/wawan.jpeg"
-          alt={siteConfig.name}
+          alt={`${siteConfig.name} - Fullstack Developer`}
           fill
           className="object-cover object-top"
           priority
+          style={{
+            transform: `translateZ(30px) scale(1.05)`,
+          }}
         />
 
         {/* Overlay gradient di bawah foto */}
@@ -70,11 +73,11 @@ export default function PhotoCard() {
         {/* Info di bawah foto */}
         <div className="absolute bottom-0 left-0 right-0 p-4">
           <p className="font-mono text-xs text-cyan-400 mb-1">
-            Available for work
+            Available for new projects
           </p>
           <div className="flex items-center gap-1 text-slate-400 text-xs">
             <MapPin size={10} />
-            <span>Indonesia</span>
+            <span>Based in Bandung, Indonesia</span>
           </div>
         </div>
 
@@ -97,7 +100,7 @@ export default function PhotoCard() {
         style={{ transform: "translateZ(20px)" }}
       >
         <span className="text-cyan-400">{"{ "}</span>
-        <span className="text-slate-300">open to work</span>
+        <span className="text-slate-300">open for projects</span>
         <span className="text-cyan-400">{" }"}</span>
       </div>
     </div>

@@ -12,9 +12,8 @@ import { SiGmail } from "react-icons/si";
 export default function HeroSection() {
   const typingTexts = [
     "Fullstack Developer",
-    "Web & Digital Growth Specialist",
-    "Next.js & Node.js Expert",
-    "Helping Businesses Grow Through Technology",
+    "Next.js Specialist",
+    "Building Scalable Web Apps",
   ];
 
   const stats = [
@@ -51,12 +50,12 @@ export default function HeroSection() {
 
             {/* sapaan */}
             <p className="font-mono text-slate-400 text-sm mb-4 animate-fade-up">
-              Hi there 👋 I&apos;m
+              Hi there 👋 I&apos;m {siteConfig.name}
             </p>
 
             {/* Nama besar */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight animate-fade-up">
-              {siteConfig.name}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight animate-fade-up">
+              I Build High-Performance Websites That Grow Your Business
             </h1>
 
             {/* Typing animation */}
@@ -65,12 +64,32 @@ export default function HeroSection() {
             </div>
 
             {/* Tagline */}
-            <p className="text-slate-400 text-lg leading-relaxed mb-6 max-w-lg">
+            <p className="text-slate-400 text-lg leading-relaxed mb-3 max-w-lg">
               {siteConfig.tagline}
             </p>
 
+            {/* CTA Butttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="#projects"
+                className="
+              group relative px-7 py-3 bg-cyan-500 text-surface-900 font-mono font-semibold text-sm rounded-lg overflow-hidden transition-all hover:shadow-lg hover:shadow-cyan-500/25 hover:-translate-y-0.5"
+              >
+                {/* shimmer effect */}
+                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+                View My Projects
+              </Link>
+
+              <Link
+                href="#contact"
+                className="px-6 py-3 border border-cyan-500/30 text-cyan-400 font-mono text-sm rounded-lg hover:bg-cyan-500/10 hover:border-cyan-500/60 transition-all hover:-translate-y-0.5"
+              >
+                Start a Project
+              </Link>
+            </div>
+
             {/* Sosial Links */}
-            <div className="flex items-center gap-2 mb-6">
+            <div className="flex items-center gap-2 mb-6 mt-3">
               {SocialLinks.map((link) => {
                 const Icon = link.icon;
                 return (
@@ -89,28 +108,8 @@ export default function HeroSection() {
               <div className="h-px flex-1 bg-slate-800" />
             </div>
 
-            {/* CTA Butttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="#projects"
-                className="
-              group relative px-7 py-3 bg-cyan-500 text-surface-900 font-mono font-semibold text-sm rounded-lg overflow-hidden transition-all hover:shadow-lg hover:shadow-cyan-500/25 hover:-translate-y-0.5"
-              >
-                {/* shimmer effect */}
-                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 bg-linear-to-r from-transparent via-white/20 to-transparent skew-x-12" />
-                View My Work →
-              </Link>
-
-              <Link
-                href="#contact"
-                className="px-6 py-3 border border-cyan-500/30 text-cyan-400 font-mono text-sm rounded-lg hover:bg-cyan-500/10 hover:border-cyan-500/60 transition-all hover:-translate-y-0.5"
-              >
-                Get In Touch
-              </Link>
-            </div>
-
             {/* Stats ketika mobile */}
-            <div className="lg:hidden flex gap-8 justify-between mt-8">
+            <div className="lg:hidden flex gap-8 justify-between">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="font-mono text-2xl font-bold text-cyan-400">
