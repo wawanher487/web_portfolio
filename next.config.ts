@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/about",
-        destination: "https://template1.wawanhermawan.dev/",
+        destination: "https://www.wawanhermawan.dev/",
         permanent: true,
       },
     ];
