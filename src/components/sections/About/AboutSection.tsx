@@ -19,7 +19,7 @@ export default function AboutSection() {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 px-6 relative">
+    <section id="about" className="py-15 px-6 relative">
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         <SectionHeader
           label="01. about me"

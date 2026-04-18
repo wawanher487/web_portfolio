@@ -110,13 +110,10 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-24 px-6 relative">
-      {/* Top separator */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-linear-to-b from-transparent to-slate-800" />
-
+    <section id="contact" className="py-15 px-6 relative">
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         <SectionHeader
-          label="04. contact"
+          label="05. contact"
           title="Get In Touch"
           subtitle="Have a project in mind or want to discuss an opportunity? I'd love to hear from you."
         />

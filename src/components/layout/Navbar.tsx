@@ -10,6 +10,7 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -104,7 +105,7 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <span className="text-cyan-500/50 text-xs mr-2">05.</span>
+              <span className="text-cyan-500/50 text-xs mr-2">06.</span>
               <a
                 href="https://resume.wawanhermawan.dev/"
                 target="_blank"

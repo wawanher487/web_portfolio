@@ -107,3 +107,94 @@ export const projects = [
     number: "03",
   },
 ];
+
+// Tambahkan di src/lib/data.ts
+
+export const pricingData = {
+  packages: [
+    {
+      id: "starter",
+      name: "Starter",
+      subtitle: "MSMEs  & Personal",
+      priceRange: "Rp500K – Rp900K",
+      description:
+        "Perfect for those who need a fast and professional online presence.",
+      color: "cyan" as const,
+      popular: false,
+      features: [
+        { text: "Landing page (max. 5 sections)", included: true },
+        { text: "Light custom design", included: true },
+        { text: "Mobile friendly & responsive", included: true },
+        { text: "WhatsApp integration", included: true },
+        { text: "Basic SEO (meta tags & indexing)", included: true },
+        { text: "Domain setup & deployment", included: true },
+        { text: "SSL (HTTPS)", included: true },
+        { text: "1 revision", included: true },
+        { text: "Contact form / lead form", included: false },
+        { text: "Priority support", included: false },
+      ],
+      cta: "Get Started",
+    },
+    {
+      id: "business",
+      name: "Business",
+      subtitle: "Growing Businesses",
+      priceRange: "Rp1.2jt – Rp2.4jt",
+      description:
+        "For businesses that need a professional website with fully custom design.",
+      color: "indigo" as const,
+      popular: true,
+      features: [
+        { text: "Website (max. 10 sections/pages)", included: true },
+        { text: "Full custom design", included: true },
+        { text: "Mobile friendly & responsive", included: true },
+        { text: "Standard performance optimization", included: true },
+        { text: "Basic SEO (meta tags & indexing)", included: true },
+        { text: "Domain setup & deployment", included: true },
+        { text: "SSL (HTTPS)", included: true },
+        { text: "2 revisions", included: true },
+        { text: "Contact form / lead form", included: true },
+        { text: "Priority support", included: false },
+      ],
+      cta: "Get Started",
+    },
+    {
+      id: "professional",
+      name: "Professional",
+      subtitle: "Companies & Branding",
+      priceRange: "Rp2.6jt – Rp5jt",
+      description:
+        "A complete solution for companies serious about building their digital brand.",
+      color: "violet" as const,
+      popular: false,
+      features: [
+        { text: "Multi-page website", included: true },
+        { text: "Full custom design", included: true },
+        { text: "Mobile friendly & responsive", included: true },
+        { text: "Advanced performance optimization", included: true },
+        { text: "SEO ready (full structure)", included: true },
+        { text: "Form & interaction integration", included: true },
+        { text: "Domain setup & deployment", included: true },
+        { text: "SSL (HTTPS)", included: true },
+        { text: "3 revisions", included: true },
+        { text: "Priority support", included: true },
+      ],
+      cta: "Get Started",
+    },
+  ],
+
+  customCard: {
+    title: "Custom / Collaboration",
+    subtitle: "Let’s Discuss First",
+    description:
+      "Have specific needs? Long-term collaboration? Complex system integrations? Let’s sit down together and find the best solution.",
+    points: [
+      "Web app & SaaS development",
+      "Collaboration / revenue share",
+      "API integration & custom backend",
+      "Technical consultation",
+      "Long-term partnership",
+    ],
+    cta: "Let's Talk",
+  },
+};

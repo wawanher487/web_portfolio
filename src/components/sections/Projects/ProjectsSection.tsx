@@ -15,7 +15,7 @@ export default function ProjectsSection() {
   const otherProjects = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-24 px-6 relative">
+    <section id="projects" className="py-15 px-6 relative">
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         <SectionHeader
           label="03. projects"

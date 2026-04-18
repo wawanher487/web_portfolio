@@ -12,7 +12,7 @@ export default function SkillSection() {
   const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="skills" className="py-24 px-6 relative">
+    <section id="skills" className="py-15 px-6 relative">
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         <SectionHeader
           label="02. skills"

@@ -35,7 +35,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center px-6 overflow-hidden  pt-15 lg:pt-0"
+      className="relative min-h-screen flex items-center px-6 overflow-hidden  py-15 lg:pt-0"
     >
       <GridBackground />
       <div className="relative z-10 max-w-6xl mx-auto w-full pt-16">

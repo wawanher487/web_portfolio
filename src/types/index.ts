@@ -36,3 +36,20 @@ export interface SkillCategory {
   color: "cyan" | "indigo" | "violet";
   items: SkillItem[];
 }
+
+export interface PricingFeature {
+  text: string;
+  included: boolean;
+}
+
+export interface PricingPackage {
+  id: string;
+  name: string;
+  subtitle: string;
+  priceRange: string;
+  description: string;
+  color: "cyan" | "indigo" | "violet";
+  popular: boolean;
+  features: PricingFeature[];
+  cta: string;
+}
